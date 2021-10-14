@@ -1,0 +1,636 @@
+@import "null";
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../../fonts/Roboto-Regular.woff");
+}
+@font-face {
+  font-family: "SFProDisplay-Bold";
+  src: url("../../fonts/SFProDisplay-Bold.woff");
+}
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: url("../../fonts/SFProDisplay-Regular.woff");
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: url("../../fonts/SFProDisplay-Semibold.woff");
+}
+//__________________________Colors
+$black: #000000;
+$white: #ffffff;
+$bg-main: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+$btn-main: linear-gradient(225deg, #542285 0%, #222266 100%);
+$stroke: #222266;
+$secondary-yellow: #FCBF59;
+$secondary-orange: #FCA759;
+$secondary-gray: #F3F2F9;
+$headers: #1A1A1A;
+$dt_slider-card: linear-gradient(225deg, #262526 0%, #19181A 100%);
+$dt_menu-card: #373640;
+//__________________________
+%br10{
+  border-radius: 10px;
+}
+%br5{
+  border-radius: 5px;
+}
+//__________________________
+body{
+  font-family: Roboto-Regular, sans-serif;
+  background-color: gray;
+}
+.wrapper{
+  height: 896px;
+  min-height: 100%;
+  overflow: hidden;
+}
+.container{
+  max-width: 414px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+//__________________________Header
+.header{
+  height: 471px;
+  width: 100%;
+  color: $white;
+  @media only screen and (max-width: 376px){
+    height: 419px;
+  }
+  @media only screen and (max-width: 321px){
+    height: 262px;
+  }
+  .container{
+    background: $bg-main;
+    height: 100%;
+    overflow: hidden;
+  }
+  .header__body{
+    height: 100%;
+    position: relative;
+    h1{
+      font-family: SFProDisplay-Bold, sans-serif;
+      font-size: 34px;
+      line-height: 41px;
+      text-align: center;
+      letter-spacing: 0.37px;
+      padding-top: 80.39px;
+      margin-bottom: 33px;
+      @media only screen and (max-width: 376px){
+        margin-bottom: 20px;
+      }
+      @media only screen and (max-width: 321px){
+        font-size: 24px;
+        line-height: 41px;
+        letter-spacing: 0.261176px;
+        padding-top: 50.39px;
+        margin-bottom: 7px;
+      }
+    }
+    .header__list{
+      ul{
+        li{
+          line-height: 50px;
+          font-size: 12px;
+          height: 50px;
+          backdrop-filter: blur(135.914px);
+          @media only screen and (max-width: 376px){
+            line-height: 46px;
+            height: 46px;
+          }
+          @media only screen and (max-width: 321px){
+            line-height: 25px;
+            height: 25px;
+          }
+          &:before{
+            content: '';
+            display: block;
+            height: 1px;
+            mix-blend-mode: overlay;
+            opacity: 0.76;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.690068) 48.69%, rgba(255, 255, 255, 0.0001) 100%);
+          }
+          &:last-of-type{
+            &:after{
+              content: '';
+              display: block;
+              height: 1px;
+              mix-blend-mode: overlay;
+              opacity: 0.76;
+              background: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.690068) 48.69%, rgba(255, 255, 255, 0.0001) 100%);
+            }
+          }
+        }
+      }
+    }
+    .header-logo{
+      position: absolute;
+      top: 28%;
+      left: 45%;
+      z-index: 20;
+      @media only screen and (max-width: 376px){
+        left: 46%;
+        top: 30%;
+      }
+      @media only screen and (max-width: 321px){
+        left: 50%;
+        top: 34%;
+      }
+      img{
+        filter: drop-shadow(10px 0px 20px rgba(0, 0, 0, 0.2));
+        @media only screen and (max-width: 376px){
+          width: 95px;
+          height: 213px;
+        }
+        @media only screen and (max-width: 321px){
+          width: 53px;
+          height: 117px;
+        }
+      }
+    }
+    .header__chart{
+      width: 100%;
+      height: 180px;
+      position: absolute;
+      top: 150px;
+      left: -20px;
+      @media only screen and (max-width: 376px){
+        top: 140px;
+      }
+      @media only screen and (max-width: 321px){
+        top: 37%;
+      }
+      #line_1, #line_2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media only screen and (max-width: 321px){
+          transform: rotate(-5deg);
+          top: -20px;
+          left: 5px;
+        }
+        #path-line_1, #path-line_2 {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: line 5s linear forwards;
+        }
+        @keyframes line {
+          to {
+            stroke-dashoffset: 0;
+          }
+        }
+      }
+      .chart-mark{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        #quote-free, #rect-free, #rect-pro, #quote-pro{
+          opacity: 0;
+          transform: scale(1.2);
+          animation-name: anim_marks;
+          animation-duration: .3s;
+          animation-delay: 2s;
+          animation-fill-mode: forwards;
+        }
+        #quote-pro{
+          transform: scale(1);
+          animation-name: anim_pro;
+          animation-duration: 2s;
+          animation-delay: 2s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in;
+        }
+        @keyframes anim_marks {
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        @keyframes anim_pro {
+          0%{
+            opacity: 1;
+          }
+          10%{
+            transform: scale(1.1);
+          }
+          20%{
+            transform: scale(1);
+          }
+          50%{
+            transform: scale(1);
+          }
+          80%{
+            transform: scale(1);
+          }
+          90%{
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      }
+      .free{
+        top: 31px;
+        right: -20px;
+        @media only screen and (max-width: 376px){
+          top: 24px;
+        }
+        @media only screen and (max-width: 321px){
+          top: -15px;
+          svg{
+            width: 70%;
+          }
+        }
+      }
+      .pro{
+        top: 129px;
+        right: -20px;
+        @media only screen and (max-width: 376px){
+          top: 115px;
+        }
+        @media only screen and (max-width: 321px){
+          top: 50px;
+          svg{
+            width: 70%;
+          }
+        }
+      }
+      .line{
+        width: 15px;
+        height: 400px;
+        background-color: #fff;
+        opacity: .5;
+        filter: blur(30px);
+        transform: rotate(140deg);
+        position: absolute;
+        top: 100px;
+        left: -40px;
+        animation: anim-stroke 1s 3s forwards;
+      }
+      @keyframes anim-stroke {
+        to{
+          top: -260px;
+          left: 500px;
+        }
+      }
+    }
+    .header__btn-close{
+      position: absolute;
+      top: 48.39px;
+      right: 0;
+      background: transparent;
+      width: 32px;
+      height: 32px;
+      @media only screen and (max-width: 321px){
+        top: 35.39px;
+      }
+      &:hover{
+        transform: scale(1.1);
+      }
+      &:active{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+//__________________________Slider
+.slider{
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  @media only screen and (max-width: 376px){
+    top: 342px;
+  }
+  @media only screen and (max-width: 321px){
+    top: 210px;
+  }
+  .container{
+    overflow: hidden;
+    @media only screen and (max-width: 376px){
+      max-width: 375px;
+    }
+    @media only screen and (max-width: 321px){
+      max-width: 320px;
+    }
+    .slider__body.swiper{
+      overflow: initial;
+      width: 100%;
+      .slider__list{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        position: relative;
+        li{
+          min-width: 100%;
+          padding: 20px;
+          height: 145px;
+          background-color: $secondary-gray;
+          backdrop-filter: blur(9.06094px);
+          @extend %br10;
+          margin-right: 5px;
+          @media only screen and (max-width: 321px){
+            padding: 15px;
+            height: 110px;
+          }
+          &.dark__theme{
+            background: $dt_slider-card;
+            .item__body{
+              h2{
+                color: $white;
+              }
+              .slider__text{
+                color: $white;
+              }
+              .slider__user-name{
+                color: $white;
+              }
+            }
+          }
+          .item__body{
+            position: relative;
+            h2{
+              font-family: "SFProDisplay-Semibold", sans-serif;
+              font-size: 15px;
+              line-height: 18px;
+              align-items: center;
+              color: $headers;
+              margin-bottom: 10px;
+              @media only screen and (max-width: 321px){
+                margin-bottom: 7px;
+              }
+            }
+            .slider__star{
+              margin-bottom: 16px;
+              @media only screen and (max-width: 321px){
+                margin-bottom: 7px;
+                svg{
+                  width: 17px;
+                  height: 17px;
+                }
+              }
+            }
+            .slider__text{
+              font-family: "Roboto-Regular", sans-serif;
+              font-size: 15px;
+              line-height: 18px;
+              padding-right: 30px;
+              color: $headers;
+              @media only screen and (max-width: 321px){
+                font-size: 13px;
+                line-height: 15.23px
+              }
+            }
+            .slider__user-name{
+              position: absolute;
+              top: 0;
+              right: 0;
+              font-size: 15px;
+              line-height: 18px;
+              color: $headers;
+              mix-blend-mode: normal;
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//__________________________Main
+.main{
+  height: 425px;
+  width: 100%;
+  @media only screen and (max-width: 376px){
+    height: 393px;
+  }
+  .container{
+    background-color: $white;
+    &.dark__theme{
+      background-color: $black;
+    }
+    .main__body{
+      display: flex;
+      flex-direction: column;
+      padding-top: 96.39px;
+      @media only screen and (max-width: 376px){
+        padding-top: 80.39px;
+      }
+      @media only screen and (max-width: 376px){
+        padding-top: 72.39px;
+      }
+      ul{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        position: relative;
+        margin-bottom: 29px;
+        @media only screen and (max-width: 376px){
+          margin-bottom: 21px;
+        }
+        @media only screen and (max-width: 321px){
+          margin-bottom: 10px;
+        }
+        li{
+          width: 118px;
+          height: 176px;
+          margin-right: 10px;
+          @extend %br5;
+          overflow: hidden;
+          background-color: $secondary-gray;
+          position: relative;
+          color: $black;
+          cursor: pointer;
+          @media only screen and (max-width: 321px){
+            height: 132px;
+          }
+          &.dark__theme{
+            background-color: $dt_menu-card;
+            color: $white;
+          }
+          &:last-of-type{
+            margin-right: 0;
+          }
+          .card__header{
+            font-family: "SFProDisplay-Bold", sans-serif;
+            width: 100%;
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+            letter-spacing: 0.78px;
+            text-transform: uppercase;
+            padding: 5px 0;
+            color: $black;
+            @media only screen and (max-width: 321px){
+              font-size: 12px;
+              line-height: 13px;
+            }
+          }
+          .card__body{
+            padding: 6px 10px 35px;
+            @media only screen and (max-width: 321px){
+              padding: 3px 8px 30px;
+            }
+            h2{
+              margin: 6px auto 10px;
+              font-family: "SFProDisplay-Bold", sans-serif;
+              font-size: 24px;
+              line-height: 24.58px;
+              text-align: center;
+              @media only screen and (max-width: 321px){
+                margin: 3px auto 10px;
+                font-size: 20px;
+                line-height: 16.58px;
+              }
+              span{
+                font-size: 15px;
+                line-height: 17.58px;
+                @media only screen and (max-width: 321px){
+                  font-size: 14px;
+                  line-height: 10.58px;
+                }
+              }
+            }
+            .card__price-total{
+              font-family: "SFProDisplay-Regular", sans-serif;
+              margin-bottom: 8px;
+              font-size: 13px;
+              line-height: 16px;
+              text-align: center;
+              letter-spacing: -0.354546px;
+              @media only screen and (max-width: 321px){
+                margin-bottom: 3px;
+                font-size: 12px;
+                line-height: 12px;
+              }
+            }
+            .card__price-month{
+              font-family: "SFProDisplay-Regular", sans-serif;
+              margin-bottom: 8px;
+              font-size: 13px;
+              line-height: 16px;
+              text-align: center;
+              letter-spacing: -0.354546px;
+              @media only screen and (max-width: 321px){
+                margin-bottom: 3px;
+                font-size: 12px;
+                line-height: 12px;
+              }
+            }
+          }
+          .card__footer{
+              width: 100%;
+              font-family: "SFProDisplay-Bold", sans-serif;
+              position: absolute;
+              bottom: 0;
+              color: $black;
+              h4{
+                font-size: 9px;
+                line-height: 15px;
+                text-align: center;
+                letter-spacing: 0.54px;
+                text-transform: uppercase;
+              }
+            }
+          &.active{
+            background: $bg-main;
+            .card__body{
+              color: $white;
+            }
+          }
+          &.disable-header{
+            max-height: 151px;
+            @media only screen and (max-width: 321px){
+              max-height: 112px;
+            }
+            .card__header{
+              display: none;
+            }
+          }
+          &.disable-footer{
+            .card__footer{
+              display: none;
+            }
+          }
+          &.discount80{
+            .card__header{
+              background-color: $secondary-yellow;
+            }
+
+            .card__footer{
+              background-color: $secondary-yellow;
+            }
+          }
+          &.discount90{
+            .card__header{
+              background-color: $secondary-orange;
+            }
+
+            .card__footer{
+              background-color: $secondary-orange;
+            }
+          }
+        }
+      }
+      .main__btn{
+        width: 100%;
+        background: $btn-main;
+        font-family: "SFProDisplay-Regular", sans-serif;
+        font-size: 22px;
+        line-height: 28px;
+        color:$white;
+        text-align: center;
+        letter-spacing: 2.0352px;
+        padding: 11px 0;
+        margin-bottom: 20px;
+        @extend %br5;
+        &:hover{
+          background: $bg-main;
+        }
+        &:focus{
+          background: $bg-main;
+        }
+      }
+    }
+  }
+}
+//__________________________Footer
+.footer{
+  .footer__body{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      p{
+        font-size: 11px;
+        line-height: 15px;
+        text-align: center;
+        color: $black;
+        mix-blend-mode: normal;
+        opacity: 0.4;
+        margin-bottom: 26px;
+        &.dark__theme{
+          color: $white;
+        }
+      }
+      button{
+        width: 134px;
+        height: 5px;
+        background: $black;
+        border-radius: 100px;
+        margin-bottom: 8px;
+        @media only screen and (max-width: 321px){
+          display: none;
+        }
+      }
+    }
+}

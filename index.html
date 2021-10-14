@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="%23source/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <title>Verv</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <h1>Try Verv for free</h1>
+                <div class="header__list">
+                    <ul>
+                        <li>Extr. Obese</li>
+                        <li>Obese</li>
+                        <li>Overweight</li>
+                        <li>Healthy</li>
+                    </ul>
+                </div>
+                <div class="header-logo">
+                    <img src="images/bitmap.png" alt="" height="250" width="112"/>
+                </div>
+                <div class="header__chart">
+                    <svg id="line_1" width="411" height="76" viewBox="0 0 411 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                id="path-line_1"
+                                opacity="0.951181"
+                                d="M0 1.19849C0 1.19849 70.8613 -0.870108 115.861 9.27057C160.86 19.4112 177.91 31.5642 230.987 41.7049C291.048 50.7188 360.846 73.6702 409.06 73.6702"
+                                stroke="white"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                    </svg>
+                    <svg id="line_2" width="414" height="179" viewBox="0 0 414 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                id="path-line_2"
+                                d="M0 2.21848C0 2.21848 104.947 1.09983 134.9 16.7609C164.854 32.4219 166.308 51.9795 208.179 66.7926C250.051 81.6058 265.796 122.778 304.308 144.033C329.419 157.891 336.676 151.814 362.634 164.414C376.486 171.139 392.782 176.727 414 176.727"
+                                stroke="white"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                        />
+                    </svg>
+                    <div class="free chart-mark">
+                        <svg id="quote-free" width="52" height="27" viewBox="0 0 52 27" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <g filter="url(#filter0_d)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M0.823364 10C0.823364 4.47715 5.30052 0 10.8234 0H41.2147C46.7376 0 51.2148 4.47715 51.2148 10V14C51.2148 19.5228 46.7376 24 41.2148 24H30.4654L25.525 27L20.5847 24H10.8234C5.30051 24 0.823364 19.5228 0.823364 14V10Z"
+                                          fill="white"/>
+                                </g>
+                                <path d="M12.9925 17V13.6719H16.4319V12.2715H12.9925V10.0039H16.7601V8.54492H11.223V17H12.9925ZM17.6624 17H19.3734V13.4902C19.3734 12.6055 19.8655 12.0898 20.7093 12.0898C20.9554 12.0898 21.1898 12.1309 21.3304 12.1895V10.6836C21.2132 10.6484 21.0433 10.6191 20.8441 10.6191C20.1058 10.6191 19.5726 11.0527 19.3499 11.8496H19.3148V10.7188H17.6624V17ZM24.6409 11.8496C25.4026 11.8496 25.9241 12.4004 25.9593 13.2031H23.2933C23.3519 12.418 23.8909 11.8496 24.6409 11.8496ZM25.9827 15.0781C25.8245 15.5586 25.3441 15.8691 24.7171 15.8691C23.8441 15.8691 23.2757 15.2539 23.2757 14.3574V14.252H27.6058V13.7305C27.6058 11.8203 26.4515 10.584 24.6234 10.584C22.7659 10.584 21.5941 11.8848 21.5941 13.8887C21.5941 15.8984 22.7542 17.1348 24.6878 17.1348C26.2405 17.1348 27.3655 16.3086 27.553 15.0781H25.9827ZM31.3089 11.8496C32.0706 11.8496 32.5921 12.4004 32.6273 13.2031H29.9612C30.0198 12.418 30.5589 11.8496 31.3089 11.8496ZM32.6507 15.0781C32.4925 15.5586 32.012 15.8691 31.3851 15.8691C30.512 15.8691 29.9437 15.2539 29.9437 14.3574V14.252H34.2737V13.7305C34.2737 11.8203 33.1194 10.584 31.2913 10.584C29.4339 10.584 28.262 11.8848 28.262 13.8887C28.262 15.8984 29.4222 17.1348 31.3558 17.1348C32.9085 17.1348 34.0335 16.3086 34.221 15.0781H32.6507Z"
+                                      fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M41.2228 18.4654C40.8346 18.8583 40.2052 18.8583 39.8171 18.4654L36.693 15.3036C36.0733 14.6765 36.5006 13.6035 37.3768 13.5865L38.5651 13.5634V8C38.5651 7.44771 39.0128 7 39.5651 7H41.6337C42.186 7 42.6337 7.44771 42.6337 8V13.4842L43.7473 13.4626C44.6419 13.4452 45.102 14.5394 44.4693 15.1797L41.2228 18.4654Z"
+                                      fill="#EE304E"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d" x="-3.17664" y="-2" width="58.3914" height="35"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                   result="hardAlpha"/>
+                                    <feOffset dy="2"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feColorMatrix type="matrix"
+                                                   values="0 0 0 0 0.352925 0 0 0 0 0 0 0 0 0 0.487432 0 0 0 0.258332 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                                <clipPath id="clip0">
+                                    <rect width="50.3914" height="27" fill="white" transform="translate(0.823364)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <svg id="rect-free" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d)">
+                                <rect x="6.60852" y="4" width="13.8329" height="14" rx="6.91647" fill="#EE304E"/>
+                                <rect x="8.10852" y="5.5" width="10.8329" height="11" rx="5.41647" stroke="white"
+                                      stroke-width="3"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d" x="0.608521" y="0" width="25.8329" height="26"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                   result="hardAlpha"/>
+                                    <feOffset dy="2"/>
+                                    <feGaussianBlur stdDeviation="3"/>
+                                    <feColorMatrix type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.139942 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="pro chart-mark">
+                        <svg id="quote-pro" width="52" height="27" viewBox="0 0 52 27" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <g filter="url(#filter0_d)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M0.823364 10C0.823364 4.47715 5.30052 0 10.8234 0H41.2147C46.7376 0 51.2148 4.47715 51.2148 10V14C51.2148 19.5228 46.7376 24 41.2148 24H30.4654L25.525 27L20.5847 24H10.8234C5.30051 24 0.823364 19.5228 0.823364 14V10Z"
+                                          fill="white"/>
+                                </g>
+                                <path d="M11.1937 8.54492V17H12.9632V14.334H14.5452C16.3265 14.334 17.5628 13.1738 17.5628 11.4395C17.5628 9.69922 16.3675 8.54492 14.6331 8.54492H11.1937ZM12.9632 9.94531H14.1644C15.178 9.94531 15.764 10.4844 15.764 11.4453C15.764 12.4121 15.1722 12.9512 14.1585 12.9512H12.9632V9.94531ZM20.3812 9.92773H21.887C22.7659 9.92773 23.3167 10.4551 23.3167 11.2754C23.3167 12.1133 22.7952 12.623 21.9046 12.623H20.3812V9.92773ZM20.3812 13.9062H21.7991L23.3753 17H25.3792L23.598 13.6426C24.5706 13.2617 25.1331 12.3242 25.1331 11.2402C25.1331 9.57031 24.0198 8.54492 22.0745 8.54492H18.6116V17H20.3812V13.9062ZM30.1136 8.39844C27.6058 8.39844 26.0355 10.0801 26.0355 12.7754C26.0355 15.4648 27.6058 17.1465 30.1136 17.1465C32.6155 17.1465 34.1917 15.4648 34.1917 12.7754C34.1917 10.0801 32.6155 8.39844 30.1136 8.39844ZM30.1136 9.875C31.4964 9.875 32.3812 11 32.3812 12.7754C32.3812 14.5449 31.4964 15.6641 30.1136 15.6641C28.7249 15.6641 27.8401 14.5449 27.8401 12.7754C27.8401 11 28.7308 9.875 30.1136 9.875Z"
+                                      fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M41.2228 18.4654C40.8346 18.8583 40.2052 18.8583 39.8171 18.4654L36.693 15.3036C36.0733 14.6765 36.5006 13.6035 37.3768 13.5865L38.5651 13.5634V8C38.5651 7.44771 39.0128 7 39.5651 7H41.6337C42.186 7 42.6337 7.44771 42.6337 8V13.4842L43.7473 13.4626C44.6419 13.4452 45.102 14.5394 44.4693 15.1797L41.2228 18.4654Z"
+                                      fill="#04CD00"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d" x="-3.17664" y="-2" width="58.3914" height="35"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                   result="hardAlpha"/>
+                                    <feOffset dy="2"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feColorMatrix type="matrix"
+                                                   values="0 0 0 0 0.352925 0 0 0 0 0 0 0 0 0 0.487432 0 0 0 0.258332 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                                <clipPath id="clip0">
+                                    <rect width="50.3914" height="27" fill="white" transform="translate(0.823364)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <svg id="rect-pro" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d)">
+                                <rect x="6.60852" y="4" width="13.8329" height="14" rx="6.91647" fill="#04CD00"/>
+                                <rect x="8.10852" y="5.5" width="10.8329" height="11" rx="5.41647" stroke="white"
+                                      stroke-width="3"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d" x="0.608521" y="0" width="25.8329" height="26"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                   result="hardAlpha"/>
+                                    <feOffset dy="2"/>
+                                    <feGaussianBlur stdDeviation="3"/>
+                                    <feColorMatrix type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.139942 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="line"></span>
+                </div>
+                <button class="header__btn-close">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.527344"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 14.4636L9.85455 8.31819C9.4303 7.89394 8.74245 7.89394 8.31819 8.31819C7.89394 8.74245 7.89394 9.4303 8.31819 9.85455L14.4636 16L8.31819 22.1454C7.89394 22.5697 7.89394 23.2576 8.31819 23.6818C8.74245 24.1061 9.4303 24.1061 9.85455 23.6818L16 17.5364L22.1454 23.6818C22.5697 24.1061 23.2576 24.1061 23.6818 23.6818C24.1061 23.2576 24.1061 22.5697 23.6818 22.1454L17.5364 16L23.6818 9.85455C24.1061 9.4303 24.1061 8.74245 23.6818 8.31819C23.2576 7.89394 22.5697 7.89394 22.1454 8.31819L16 14.4636Z" fill="url(#paint0_linear)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="16" y1="0" x2="0" y2="16" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#894AC9"/>
+                                <stop offset="1" stop-color="#4D46B1"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="slider">
+        <div class="container">
+            <div class="slider__body swiper mySwiper">
+                <ul class="slider__list swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="item__body">
+                            <h2>Fantastic!</h2>
+                            <div class="slider__star">
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                            </div>
+                            <p class="slider__text">I can say I am 💯 happy with this app. 15 pounds off in 30 days!</p>
+                            <span class="slider__user-name">lila_lane</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="item__body">
+                            <h2>Great app</h2>
+                            <div class="slider__star">
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                            </div>
+                            <p class="slider__text">I'm on my 9th week and my body has changed tremendously!&#127881;&#127881;</p>
+                            <span class="slider__user-name">Therealtierra</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="item__body">
+                            <h2>It works!</h2>
+                            <div class="slider__star">
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                            </div>
+                            <p class="slider__text">Just finished the program.. love it. Down 33lbs!!</p>
+                            <span class="slider__user-name">tenniagirl</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="item__body">
+                            <h2>Worth a try</h2>
+                            <div class="slider__star">
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                                <svg width="21" height="19" viewBox="0 0 21 19" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 15.75L4.32825 18.9947L5.50695 12.1223L0.513907 7.25532L7.41413 6.25266L10.5 0L13.5859 6.25266L20.4861 7.25532L15.493 12.1223L16.6717 18.9947L10.5 15.75Z"
+                                          fill="#FCBF59"/>
+                                </svg>
+                            </div>
+                            <p class="slider__text">"By far the best app out there to lose weight!&#128170;&#128170;&#128170;</p>
+                            <span class="slider__user-name">1QueenE</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="container container__main">
+            <div class="main__body">
+                <ul class="discount-card__list">
+                    <li goTo="1" class="discount-card__item disable-header disable-footer">
+                        <header class="card__header">
+                            <h3 class="card__subtitle">SAVE 80%</h3>
+                        </header>
+                        <div class="card__body">
+                            <h2 class="card__title">1<br> <span>month</span></h2>
+                            <p class="card__price-total">$14.99 /<br> month</p>
+                            <p class="card__price-month">month: $14.99</p>
+                        </div>
+                        <footer class="card__footer">
+                                <h4 class="card__sale">SALE</h4>
+                            </footer>
+                    </li>
+                    <li goTo="2" class="discount-card__item discount80 disable-footer">
+                        <header class="card__header">
+                            <h3 class="card__subtitle">SAVE 80%</h3>
+                        </header>
+                        <div class="card__body">
+                            <h2 class="card__title">12<br> <span>months</span></h2>
+                            <p class="card__price-total">$39.99 /<br> per year</p>
+                            <p class="card__price-month">month: $3.33</p>
+                        </div>
+                        <footer class="card__footer">
+                                <h4 class="card__sale">SALE</h4>
+                            </footer>
+                    </li>
+                    <li goTo="3" class="discount-card__item discount90">
+                        <header class="card__header">
+                            <h3 class="card__subtitle">SAVE 90%</h3>
+                        </header>
+                        <div class="card__body">
+                            <h2 class="card__title">3<br> <span>months</span></h2>
+                            <p class="card__price-total">$29.99 /<br> 3 month</p>
+                            <p class="card__price-month">month: $9.99</p>
+                        </div>
+                        <footer class="card__footer">
+                                <h4 class="card__sale">SALE</h4>
+                            </footer>
+                    </li>
+                </ul>
+                <a href="" class="main__btn btn">Continue</a>
+            </div>
+            <footer class="footer">
+                <div class="footer__body">
+                    <p class="footer__body-text">Recurring billing. Cancel anytime.</p>
+                    <button class="home" type="button"> </button>
+                </div>
+            </footer>
+        </div>
+    </section>
+</div>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
